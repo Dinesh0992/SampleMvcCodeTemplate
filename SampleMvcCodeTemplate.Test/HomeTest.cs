@@ -25,5 +25,12 @@ namespace SampleMvcCodeTemplate.Test
             Assert.IsType<ViewResult>(result);
         }
 
+        [Fact]
+        public void Index_ActionExecutes_ReturnsObjectResultForIndex()
+        {
+            var result = _controller.Index();
+            Assert.IsType<OkObjectResult>(result);
+        }
+
     }
 }
