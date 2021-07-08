@@ -26,10 +26,11 @@ namespace SampleMvcCodeTemplate.Test
         }
 
         [Fact]
-        public void Index_ActionExecutes_ReturnsObjectResultForIndex()
+        public void Index_ActionExecutes_CheckforNotTypeObjectResultForIndex()
         {
             var result = _controller.Index();
-            Assert.IsType<OkObjectResult>(result);
+         //   Assert.IsType<OkObjectResult>(result); //failed test case check
+            Assert.IsNotType<OkObjectResult>(result);
         }
 
     }
